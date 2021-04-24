@@ -81,16 +81,16 @@
   <sql id="Base_Column_List">
     emp_id, emp_name, gender, email, d_id
   </sql>
-  <sql id="withDept_Colum_list" >  e.emp_id, e.emp_name, e.gender, e.email, e.d_id,d.dept_id,d.dept_name
+  <sql id="withDept_Column_list" >  e.emp_id, e.emp_name, e.gender, e.email, e.d_id,d.dept_id,d.dept_name
   </sql>
 
 <!-- select with join -->
-  <select id="selectByExampleWithDept"  parameterType="com.crud.bean.EmployeeExample" resultMap="withDeptResultMap">
+  <select id="selectByExampleWithDept"  resultMap="withDeptResultMap">
     select
     <if test="distinct">
       distinct
     </if>
-    <include refid="withDept_Colum_list" />
+    <include refid="withDept_Column_list" />
     from tbl_emp e left join  tbl_dept d on e.`e_id` = d.`dept_id`
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -99,9 +99,9 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKeyWithDept"  parameterType="java.lang.Integer" resultMap="WithDeptResultMap">
+  <select id="selectByPrimaryKeyWithDept"  resultMap="withDeptResultMap">
     select
-    <include refid="withDept_Colum_listt" />
+    <include refid="withDept_Column_list" />
     from tbl_emp e left join tbl_dept d
     on e.`d_id` = d.`dept_id`
     where emp_id = #{empId,jdbcType=INTEGER}

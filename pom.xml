@@ -34,11 +34,18 @@
             <version>5.2.8.RELEASE</version>
         </dependency>
 
-        <!--     spring    -->
+        <!--     spring aop   -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
             <version>5.2.8.RELEASE</version>
+        </dependency>
+
+        <!--        spring test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.2.9.RELEASE</version>
         </dependency>
         <!--orm -->
         <dependency>
@@ -54,9 +61,9 @@
         </dependency>
         <!--connection pool -->
         <dependency>
-            <groupId>c3p0</groupId>
+            <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.1.2</version>
+            <version>0.9.5.5</version>
         </dependency>
 
         <!--        db driver -->
@@ -86,7 +93,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-            <scope>test</scope>
         </dependency>
 
         <!-- mybatis generator    -->

@@ -1,6 +1,17 @@
 package com.crud.bean;
 
 public class Employee {
+    public Employee() {
+    }
+
+    public Employee(Integer empId, String empName, String gender, String email, Integer dId) {
+        this.empId = empId;
+        this.empName = empName;
+        this.gender = gender;
+        this.email = email;
+        this.dId = dId;
+    }
+
     private Integer empId;
 
     private String empName;
@@ -10,16 +21,6 @@ public class Employee {
     private String email;
 
     private Integer dId;
-
-    private Department department;
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 
     public Integer getEmpId() {
         return empId;

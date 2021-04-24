@@ -6,6 +6,8 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface EmployeeMapper {
+    Employee selectByPrimaryKeyWithDept(Integer empId);
+
     long countByExample(EmployeeExample example);
 
     int deleteByExample(EmployeeExample example);
@@ -21,8 +23,6 @@ public interface EmployeeMapper {
     Employee selectByPrimaryKey(Integer empId);
 
     List<Employee> selectByExampleWithDept(EmployeeExample example);
-
-    Employee selectByPrimaryKeyWithDept(Integer empId);
 
     int updateByExampleSelective(@Param("record") Employee record, @Param("example") EmployeeExample example);
 
