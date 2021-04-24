@@ -24,7 +24,7 @@
 
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 <!--   Character Encoding filter /  this filter "must" in the first place of all filter    -->
     <filter>
